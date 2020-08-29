@@ -7,7 +7,8 @@ Manual de utilização:
   
   1. Instale o Apache2, PHP, MySQL-Server, MySQL-Workbench e suas respectivas dependências.
   2. Faça o download do CarRentalDb.sql e importe ele pelo Workbench.
-  3. Acesse o localhost (127.0.0.1) e controle a API por lá.
+  3. Faça o download do resto dos arquivos e mova-os para /var/www/html.
+  4. Acesse o localhost (127.0.0.1) e controle a API por lá.
 
 Observações:
 
