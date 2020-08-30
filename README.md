@@ -76,4 +76,4 @@ Instruções de uso pelo Postman:
 Observações:
 
     1. Falta o retorno do MySQL error em quase todas as querys sem sucesso.
-    2. Não sei o processo de instalação específico para o Windows pois não uso esse OS, mas deve ser similar.
+    2. Não sei o processo de instalação específico para o Windows, mas deve ser similar.
