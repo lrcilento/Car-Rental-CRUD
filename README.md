@@ -23,13 +23,24 @@ Instruções de uso pelo Postman:
   Operations:
   
     read.php (GET)
-    single_read.php/?id=<id> (GET)
+    single_read.php/?id=<id> (GET)**
     create.php (POST)*
     delete.php (DELETE)*
     update.php (POST)*
   
     *: Requer envio de JSON.
-
+    **: Substitua "id" por "plate" ou "cpf" dependendo do endpoint.
+  
+  Exemplos:
+  
+    127.0.0.1/api/Rents/read.php
+    127.0.0.1/api/Clients/single_read.php/?cpf=99999999999
+    127.0.0.1/api/Cars/delete.php
+        {
+        "plate": "AAA1111"
+        }
+ 
 Observações:
 
     1. Falta o retorno do MySQL error em quase todas as querys sem sucesso.
+    2. Não sei o processo de instalação específico para o Windows pois não uso esse OS, mas com certeza funciona.
