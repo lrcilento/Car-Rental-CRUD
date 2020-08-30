@@ -16,9 +16,27 @@ Instruções de uso pelo Postman:
   
   Endpoints:
   
-    Clients
-    Cars
-    Rents
+    Clients:
+        string cpf
+        string name
+        string address
+    
+    Cars:
+        string plate
+        string model
+        int year
+        string color
+        float dailyRate
+        boolean rentStatus
+    
+    Rents:
+        int id
+        string client_cpf
+        string car_plate
+        string startDate
+        string endDate
+        float totalPrice
+        boolean rentStatus
     
   Operations:
   
@@ -37,7 +55,22 @@ Instruções de uso pelo Postman:
     127.0.0.1/api/Clients/single_read.php/?cpf=99999999999
     127.0.0.1/api/Cars/delete.php
         {
-        "plate": "AAA1111"
+            "plate": "AAA1111"
+        }
+    127.0.0.1/api/Clients/create.php
+        {
+            "cpf": "99999999999",
+            "name": "John",
+            "address": "XYZ Street, 123"
+        }
+    127.0.0.1/api/Cars/update.php
+        {
+            "plate": "AAA1111",
+            "model": "Uno",
+            "year": "2015",
+            "color": "Red",
+            "dailyRate": "20",
+            "rentStatus": "0"
         }
  
 Observações:
