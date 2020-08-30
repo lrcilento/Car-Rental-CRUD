@@ -204,7 +204,7 @@
                     xhr.setRequestHeader("Content-Type", "application/json"); 
                     xhr.onreadystatechange = function () { 
                         if (xhr.readyState === 4 && xhr.status === 200) { 
-                            document.getElementById("root").innerHTML = this.responseText; 
+                            document.getElementById("root").innerHTML = trim(this.responseText); 
                         }
                     };
                     xhr.send();
@@ -217,7 +217,10 @@
                     xhr.setRequestHeader("Content-Type", "application/json"); 
                     xhr.onreadystatechange = function () { 
                         if (xhr.readyState === 4 && xhr.status === 200) { 
-                            document.getElementById("root").innerHTML = this.responseText; 
+                            document.getElementById("root").innerHTML = trim(this.responseText); 
+                        }
+                        else {
+                            document.getElementById("root").innerHTML = "No matches.";
                         }
                     };
                     xhr.send();
@@ -288,8 +291,23 @@
                 }
             }
 
-            function createJSON() {
-                
+            function trim(responseText) {
+                var operation = document.getElementById("operation").value;
+
+                responseText = responseText.split(",").join("<br>")
+                responseText = responseText.split(`":"`).join(" = ")
+                responseText = responseText.split(`"`).join("")
+                responseText = responseText.split("{").join("")
+                responseText = responseText.split("}").join("<br>")
+
+                if (operation == "read") {
+                    responseText = responseText.split("body:[").join("")
+                    responseText = responseText.split("]").join("")
+                    responseText = responseText.split("itemCount:").join("")
+                    responseText = responseText.substring(1, responseText.length - 5)
+                }
+
+                return responseText
             }
 
         </script>
