@@ -78,4 +78,3 @@ Observações:
 
     1. Falta o retorno do MySQL error em quase todas as querys sem sucesso.
     2. Não sei o processo de instalação específico para o Windows, mas deve ser similar.
-    3. O dashboard não fica em "index.php" para facilitar o gerencimento dos meus arquivos, mas é só renomear "carrental.php" para "index.php".
